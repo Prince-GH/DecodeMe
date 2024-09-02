@@ -1,6 +1,8 @@
-document.getElementById('startButton').addEventListener('click', startGame);
+const start = document.getElementById('startButton');
+start.addEventListener('click', startGame);
 
 function startGame() {
+    document.getElementById('startButton').style.display = 'none';
     const boxes = document.querySelectorAll('.box');
     const numbers = shuffle(Array.from({ length: 9 }, (_, i) => i + 1));
     const message = document.querySelector('.message');
@@ -26,11 +28,14 @@ function startGame() {
                     currentIndex++;
                     if (currentIndex > 9) {
                         message.textContent = 'Congratulations! You won!';
+                        start.style.display = 'block';
                     }
                 } else {
                     message.textContent = 'Wrong sequence! Try again!';
                     boxes.forEach(b => b.classList.remove('flipped'));
                     currentIndex = 1;
+                    start.textContent = "Try Again";
+                    start.style.display = 'block';
                 }
             });
         });

@@ -21,6 +21,70 @@ body {
     background-color: #f0f0f0;
 }
 
+/* cloud */
+.cloud {
+    position: relative;
+    width: 100px;
+    height: 60px;
+}
+
+.cloud-block {
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.cloud-block-1 {
+    width: 50px;
+    height: 30px;
+    top: -10px;
+    left: -20px;
+    background: rgb(176, 210, 238);
+}
+
+.cloud-block-2 {
+    width: 100px;
+    height: 50px;
+    top: 20px;
+    left: 0;
+    background: rgb(142, 198, 235);
+}
+
+.back-vid{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    position: absolute;
+    top: -160px;
+    gap: 200px;
+    overflow: hidden;
+    & .c1{
+        top:100px
+    }
+    & .c2{
+        top:-100px;
+    }
+    & .c3{
+        top: 280px;
+    }
+    animation: move 20s linear infinite;
+    
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0%);
+    }to{
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
 .headder{
     width: 100%;
     display: flex;
@@ -49,20 +113,21 @@ body {
 .box {
     width: 100px;
     height: 100px;
-    background-color: #3735c2;
+    background-color: #407aa194;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
     cursor: pointer;
     color: white;
     font-size: 24px;
-    
+    border-radius:5px;
+    box-shadow: inset 0px 0px 20px 2px rgb(110, 163, 247);
 }
 
 .num {
     display: none;
     font-size:60px;
+    color:#134d5c;
 }
 
 .flipped .num {
@@ -70,7 +135,7 @@ body {
 }
 
 .flipped {
-    background-color: #FF6347;
+    background-color: #47c5ff7a;
 }
 
 button {
@@ -78,13 +143,28 @@ button {
     font-size: 30px;
     letter-spacing:3px;
     cursor: pointer;
-    border-radius: 20px;
-    background: #134d5c;
+    background: #134d5cec;
     border: none;
     color: white;
+    border-radius: 5px;
 }
 
 .message {
     font-size: 30px;
     margin-bottom: 10px;
+    color: #134d5c;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-image: url(/ground.png);
+    background-size:auto;
+    background-repeat: repeat-x;
 }
