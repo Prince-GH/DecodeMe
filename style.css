@@ -160,7 +160,7 @@ footer{
     align-items: center;
     position: absolute;
     bottom: 0;
-    background-image: url(/ground.png);
+    background-image: url(ground.png);
     background-size:auto;
     background-repeat: repeat-x;
 }
