@@ -1,0 +1,88 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Handjet", sans-serif;
+    font-weight:bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.headder{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    /* border: 2px solid red; */
+    padding: 20px;
+    position:absolute;
+    top:0px;
+
+    & .logo{
+        font-size:30px;
+        font-family: "Silkscreen", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.canvas {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3735c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    
+}
+
+.num {
+    display: none;
+    font-size:60px;
+}
+
+.flipped .num {
+    display: block;
+}
+
+.flipped {
+    background-color: #FF6347;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 30px;
+    letter-spacing:3px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #134d5c;
+    border: none;
+    color: white;
+}
+
+.message {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
