@@ -69,21 +69,16 @@ body {
     & .c3{
         top: 280px;
     }
-    animation: move 20s linear infinite;
-    
+        animation: move 10s linear infinite;
 }
 
 @keyframes move{
     from{
         transform: translateX(0%);
     }to{
-        transform: translateX(-50%);
+        transform: translateX(-25%);
     }
 }
-
-
-
-
 
 .headder{
     width: 100%;

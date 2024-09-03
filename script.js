@@ -29,6 +29,12 @@ function startGame() {
                     if (currentIndex > 9) {
                         message.textContent = 'Congratulations! You won!';
                         start.style.display = 'block';
+                        start.textContent = 'New Game';
+                        start.addEventListener('click',(e)=>{
+                            boxes.forEach(b => b.classList.remove('flipped'));
+                            currentIndex = 1;
+                        })
+                        
                     }
                 } else {
                     message.textContent = 'Wrong sequence! Try again!';
@@ -42,6 +48,7 @@ function startGame() {
 
     }, 3000);
 }
+
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
